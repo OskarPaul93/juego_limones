@@ -120,3 +120,15 @@ function aparecerLimon(){
     actualizarPantalla();
 }
 
+function reiniciar (){
+    vidas=3;
+    puntaje=0;
+    velocidadCaida=200;
+
+    mostrarSpan("txtVidas", vidas);
+    mostrarSpan("txtPuntaje", puntaje);
+    clearInterval(intervalo);
+    iniciar ();
+
+
+}
