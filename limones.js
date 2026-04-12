@@ -13,7 +13,8 @@ let limonX=canvas.width/2;
 let limonY=0;
 let puntaje=0;
 let vidas= 3;
-let velocidadCaida=100;
+let velocidadCaida=200;
+
 
 function iniciar(){
     setInterval(bajarLimon,velocidadCaida); // primerParametro: funcion, segundoParametro: tiempo en milisegundo
@@ -79,6 +80,22 @@ function detectarAtrapado(){
         aparecerLimon();
         puntaje=puntaje+1;
         mostrarSpan("txtPuntaje",puntaje);
+
+        if(puntaje==3){
+            velocidadCaida=180;
+            setInterval(bajarLimon,velocidadCaida);
+        }
+
+        if(puntaje==6){
+            velocidadCaida=150;
+            setInterval(bajarLimon,velocidadCaida);
+        }
+
+        if(puntaje==10){
+            
+            alert("GENIAL, GANASTE");
+        }
+
     }
 }
 
