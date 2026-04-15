@@ -109,7 +109,7 @@ function detectarPiso(){
         
         if(vidas==0){
             clearInterval(intervalo);
-            alert ("GAME OVER")
+            alert ("Juego terminado")
         }
     }
 }
